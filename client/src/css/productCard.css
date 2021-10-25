@@ -1,0 +1,90 @@
+.container-product {
+  display: flex;
+  margin: 2vmax auto;
+  width: 80vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.feature-title {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+.productCard {
+  width: 17vmax; /* 14vmax */
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: al 0.5s;
+  padding-bottom: 0.5vmax;
+}
+.productCard > img {
+  width: 17vmax; /* 14vmax */
+  height: 20vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+}
+.productCard > div {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 0.7vmax;
+}
+.productCard > div > span {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5vmax;
+  font: 400 0.5vmax "Arial", "sans-serif";
+  font-size: 1vmax;
+}
+.productCard > p {
+  font-family: "Arial", "sans-serif";
+  font-size: 1.5vmax;
+  margin: 1vmax 0.5vmax;
+  margin-bottom: 0;
+}
+.productCardSpan {
+  font: 400 1vmax "Roboto";
+  width: 20%;
+}
+
+.productCard > span {
+  margin: 0.5vmax;
+  color: tomato;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.8vmax;
+}
+
+.productCard:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+  transform: translateY(-1vmax);
+  transition: 100ms ease-in-out;
+}
+.ratingStar {
+  color: rgb(255, 190, 13);
+  font-family: "Arial", serif;
+  font-size: 1.5vmax;
+  font-weight: bold;
+  width: fit-content;
+}
+
+@media screen and (max-width: 600px) {
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+  .productCard > div {
+    margin: 0vmax;
+    display: block;
+  }
+  .productCard > span {
+    font-size: 1.54vmax;
+  }
+  .productCard > div > span {
+    margin: 0 0.5vmax;
+    font: 300 1vmax "Roboto";
+  }
+}
