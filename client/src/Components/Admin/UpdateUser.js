@@ -14,7 +14,6 @@ import {
   clearErrors,
 } from "../../actions/userAction";
 import { useHistory } from "react-router";
-
 import Loader from "../Layout/Loader";
 
 const UpdateUser = ({ match }) => {

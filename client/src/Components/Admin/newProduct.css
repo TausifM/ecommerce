@@ -40,7 +40,7 @@
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.267);
   border-radius: 4px;
-  font: 300 0.9vmax cursive;
+  font: 400 1.2vmax "Roboto";
   outline: none;
 }
 
@@ -87,12 +87,13 @@
   border: none;
   background-color: tomato;
   color: white;
-  font: 300 0.9vmax "Roboto";
+  font: 800 1.4vmax "Poppins";
   width: 100%;
   padding: 0.8vmax;
   cursor: pointer;
   transition: all 0.5s;
   border-radius: 4px;
+  align-items: center;
   outline: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
 }
@@ -113,7 +114,7 @@
   .createProductForm > div > select,
   .createProductForm > div > textarea {
     padding: 2.5vmax 5vmax;
-    font: 300 1.7vmax cursive;
+    font: 400 1.7vmax "Roboto";
   }
 
   .createProductForm > div > svg {
@@ -127,7 +128,7 @@
 
   #createProductFormFile > input::file-selector-button {
     height: 7vh;
-    font: 400 1.8vmax cursive;
+    font: 400 1.8vmax "Roboto";
   }
 
   #createProductBtn {

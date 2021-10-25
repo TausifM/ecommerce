@@ -51,11 +51,9 @@ const Header = () => {
           <div className="container-fluid">
             <div className="row">
               <div className="col-sm-3">
-                <div className="logo">
-                  <Link to="/">
-                    <img src={Logo} alt="Logo" />
-                  </Link>
-                </div>
+                <Link to="/">
+                  <img src={Logo} alt="Logo" />
+                </Link>
               </div>
               <div className="col-sm-9">
                 <ul className="email text_align_right">

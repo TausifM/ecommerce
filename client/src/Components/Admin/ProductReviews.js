@@ -21,7 +21,6 @@ import { DELETE_REVIEW_RESET } from "../../constants/productConstants";
 const ProductReviews = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-
   const alert = useAlert();
 
   const { error: deleteError, isDeleted } = useSelector(

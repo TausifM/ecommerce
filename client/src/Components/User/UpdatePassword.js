@@ -9,10 +9,12 @@ import MetaData from "../Layout/MetaData";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import LockIcon from "@material-ui/icons/Lock";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
+import { useHistory } from "react-router";
 
-const UpdatePassword = ({ history }) => {
+const UpdatePassword = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
+  const history = useHistory();
 
   const { error, isUpdated, loading } = useSelector((state) => state.profile);
 

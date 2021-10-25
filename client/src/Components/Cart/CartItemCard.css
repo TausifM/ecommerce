@@ -16,13 +16,13 @@
 }
 
 .CartItemCard > div > a {
-  font: 300 1.4vmax cursive;
+  font: 600 1.6vmax "Roboto";
   color: rgba(24, 24, 24, 0.815);
   text-decoration: none;
 }
 
 .CartItemCard > div > span {
-  font: 300 1.3vmax "Roboto";
+  font: 400 1.3vmax "Roboto";
   color: rgba(24, 24, 24, 0.815);
 }
 
@@ -46,14 +46,14 @@
   }
 
   .CartItemCard > div > a {
-    font: 300 2vmax cursive;
+    font: 800 2.5vmax "Roboto";
   }
 
   .CartItemCard > div > span {
-    font: 300 1.9vmax "Roboto";
+    font: 400 2.2vmax "Roboto";
   }
 
   .CartItemCard > div > p {
-    font: 100 1.8vmax "Roboto";
+    font: 400 1.8vmax "Roboto";
   }
 }

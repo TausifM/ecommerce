@@ -8,6 +8,7 @@
   left: 0%;
   max-width: 100%;
   background-color: white;
+  z-index: 6;
 }
 
 .profileContainer > div {
@@ -68,7 +69,7 @@
 
 .profileContainer > div:last-child > div > p {
   color: rgb(253, 75, 5);
-  font: 600 1.4vmax "Roboto" cursive;
+  font: 600 1.4vmax "Poppins";
   margin: 0.2vmax;
 }
 

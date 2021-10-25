@@ -20,8 +20,8 @@ import MyOrders from "./Components/Order/MyOrders";
 import store from "./store";
 import { useEffect, useState } from "react";
 import { loadUser } from "./actions/userAction";
-//import Footer from "./Components/Footer";
-//import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 import ProductReviews from "./Components/Admin/ProductReviews";
 import UpdateUser from "./Components/Admin/UpdateUser";
 import UsersList from "./Components/Admin/UsersList";
@@ -61,6 +61,7 @@ function App() {
 
   return (
     <Router>
+      <Header />
       {isAuthenticated && <UserOptions user={user} />}
 
       <Switch>
@@ -168,6 +169,7 @@ function App() {
           }
         />
       </Switch>
+      <Footer />
     </Router>
   );
 }

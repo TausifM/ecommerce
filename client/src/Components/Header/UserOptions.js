@@ -15,7 +15,6 @@ import { Home } from "@material-ui/icons";
 
 const UserOptions = ({ user }) => {
   const { cartItems } = useSelector((state) => state.cart);
-
   const [open, setOpen] = useState(false);
   const history = useHistory();
   const alert = useAlert();
@@ -65,6 +64,7 @@ const UserOptions = ({ user }) => {
   function logoutUser() {
     dispatch(logout());
     alert.success("Logout Successfully");
+    history.push("/");
   }
 
   return (

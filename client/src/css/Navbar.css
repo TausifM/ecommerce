@@ -1,7 +1,7 @@
 .navbar {
   display: flex-start;
   align-items: center;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .menu-bars {

@@ -4,6 +4,7 @@
   flex-direction: column;
   position: relative;
   padding: 4rem 0;
+  z-index: 8;
 }
 
 .sidebar > a:first-child {
@@ -39,4 +40,10 @@
 
 .MuiTypography-root {
   background-color: #fff !important;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    align-items: center;
+  }
 }
