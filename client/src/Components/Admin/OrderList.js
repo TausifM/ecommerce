@@ -14,11 +14,12 @@ import {
   getAllOrders,
   clearErrors,
 } from "../../actions/orderAction";
+import { useHistory } from "react-router";
 import { DELETE_ORDER_RESET } from "../../constants/orderConstants";
 
-const OrderList = ({ history }) => {
+const OrderList = () => {
   const dispatch = useDispatch();
-
+  const history = useHistory();
   const alert = useAlert();
 
   const { error, orders } = useSelector((state) => state.allOrders);

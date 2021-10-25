@@ -12,10 +12,12 @@ import TransferWithinAStationIcon from "@material-ui/icons/TransferWithinAStatio
 import { Country, State } from "country-state-city";
 import { useAlert } from "react-alert";
 import CheckoutSteps from "../Cart/CheckoutSteps";
+import { useHistory } from "react-router";
 
-const Shipping = ({ history }) => {
+const Shipping = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
+  const history = useHistory();
   const { shippingInfo } = useSelector((state) => state.cart);
 
   const [address, setAddress] = useState(shippingInfo.address);

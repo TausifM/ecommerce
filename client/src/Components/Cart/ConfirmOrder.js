@@ -5,10 +5,12 @@ import MetaData from "../Layout/MetaData";
 import "./ConfirmOrder.css";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
+import { useHistory } from "react-router";
 
-const ConfirmOrder = ({ history }) => {
+const ConfirmOrder = () => {
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.user);
+  const history = useHistory();
 
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.quantity * item.price,

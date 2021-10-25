@@ -16,7 +16,7 @@ import { Button } from "@material-ui/core";
 import { UPDATE_ORDER_RESET } from "../../constants/orderConstants";
 import "./processOrder.css";
 
-const ProcessOrder = ({ history, match }) => {
+const ProcessOrder = ({ match }) => {
   const { order, error, loading } = useSelector((state) => state.orderDetails);
   const { error: updateError, isUpdated } = useSelector((state) => state.order);
 
