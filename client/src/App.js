@@ -6,8 +6,6 @@ import "./css/responsive.css";
 import ProductDetails from "./Components/ProductDetails";
 import Search from "./Components/Product/Search";
 import Cart from "./Components/Cart/Cart";
-import Copy from "./Components/Copy";
-import ProductsScreen from "./Components/ProductsScreen";
 import LoginSignUp from "./Components/User/LoginSignUp";
 import Profile from "./Components/User/Profile";
 import { useSelector } from "react-redux";
@@ -32,7 +30,7 @@ import OrderList from "./Components/Admin/OrderList";
 import UpdateProduct from "./Components/Admin/UpdateProduct";
 import NewProduct from "./Components/Admin/NewProduct";
 import ProductList from "./Components/Admin/ProductList";
-import Dashboard from "@material-ui/icons/Dashboard";
+import Dashboard from "./Components/Admin/Dashboard";
 import About from "./Components/Layout/About/About";
 import Contact from "./Components/Layout/Contact/Contact";
 import Products from "./Components/Copy";
@@ -63,8 +61,6 @@ function App() {
 
   return (
     <Router>
-      <Header />
-
       {isAuthenticated && <UserOptions user={user} />}
 
       <Switch>
@@ -172,8 +168,6 @@ function App() {
           }
         />
       </Switch>
-
-      <Footer />
     </Router>
   );
 }
