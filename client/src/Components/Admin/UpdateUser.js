@@ -13,11 +13,14 @@ import {
   updateUser,
   clearErrors,
 } from "../../actions/userAction";
+import { useHistory } from "react-router";
+
 import Loader from "../Layout/Loader";
 
-const UpdateUser = ({ history, match }) => {
+const UpdateUser = ({ match }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
+  const history = useHistory();
 
   const { loading, error, user } = useSelector((state) => state.userDetails);
 

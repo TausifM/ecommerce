@@ -7,6 +7,8 @@ import {
   getAllReviews,
   deleteReviews,
 } from "../../actions/productAction";
+import { useHistory } from "react-router";
+
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
 import MetaData from "../Layout/MetaData";
@@ -16,8 +18,9 @@ import Star from "@material-ui/icons/Star";
 import SideBar from "./Sidebar";
 import { DELETE_REVIEW_RESET } from "../../constants/productConstants";
 
-const ProductReviews = ({ history }) => {
+const ProductReviews = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const alert = useAlert();
 

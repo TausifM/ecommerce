@@ -11,10 +11,10 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import SideBar from "./Sidebar";
 import { getAllUsers, clearErrors, deleteUser } from "../../actions/userAction";
 import { DELETE_USER_RESET } from "../../constants/userConstants";
-
-const UsersList = ({ history }) => {
+import { useHistory } from "react-router";
+const UsersList = () => {
   const dispatch = useDispatch();
-
+  const history = useHistory();
   const alert = useAlert();
 
   const { error, users } = useSelector((state) => state.allUsers);

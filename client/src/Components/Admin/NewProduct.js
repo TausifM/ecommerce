@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { clearErrors, createProduct } from "../../actions/productAction";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
+import { useHistory } from "react-router";
 import MetaData from "../Layout/MetaData";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import DescriptionIcon from "@material-ui/icons/Description";
@@ -13,9 +14,10 @@ import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import SideBar from "./Sidebar";
 import { NEW_PRODUCT_RESET } from "../../constants/productConstants";
 
-const NewProduct = ({ history }) => {
+const NewProduct = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
+  const history = useHistory();
 
   const { loading, error, success } = useSelector((state) => state.newProduct);
 

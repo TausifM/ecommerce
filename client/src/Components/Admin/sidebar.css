@@ -2,6 +2,7 @@
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
+  position: relative;
   padding: 4rem 0;
 }
 
@@ -9,8 +10,9 @@
   padding: 0;
 }
 .sidebar > a > img {
-  width: 20%;
+  width: 80%;
   transition: all 0.5s;
+  margin-left: 15px;
 }
 
 .sidebar > a > img:hover {
@@ -19,13 +21,12 @@
 .sidebar a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.493);
-  font: 200 1rem "Roboto";
+  font: 400 1.4rem "Roboto";
   padding: 2rem;
   transition: all 0.5s;
 }
 .sidebar a:hover {
   color: tomato;
-  transform: scale(1.1);
 }
 
 .sidebar a > P {

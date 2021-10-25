@@ -7,6 +7,7 @@ import {
   getAdminProduct,
   deleteProduct,
 } from "../../actions/productAction";
+import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
@@ -16,7 +17,8 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import SideBar from "./Sidebar";
 import { DELETE_PRODUCT_RESET } from "../../constants/productConstants";
 
-const ProductList = ({ history }) => {
+const ProductList = () => {
+  const history = useHistory();
   const dispatch = useDispatch();
 
   const alert = useAlert();
