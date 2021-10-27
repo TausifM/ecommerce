@@ -34,10 +34,12 @@ cloudinary.config({
 const product = require("./routes/productRoute.js");
 const user = require("./routes/userRouter.js");
 const order = require("./routes/orderRoute.js");
+const payment = require("./routes/paymentRoute.js");
 //Routes
 app.use("/api/v1", product);
 app.use("/api/v1", user);
 app.use("/api/v1", order);
+app.use("/api/v1", payment);
 
 // Middleware
 app.use(errorMiddleware);
