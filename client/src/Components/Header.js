@@ -5,19 +5,19 @@ import Logo from "../images/logo_footer.png";
 import SideNavbar from "./SideNavbar";
 import {
   FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
+  FaFacebookSquare,
+  FaInstagramSquare,
   FaLinkedin,
   FaPhone,
   FaSearch,
-  FaTwitter,
+  FaTwitterSquare,
   FaUser,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Person from "@material-ui/icons/Person";
 import { AiOutlineAccountBook } from "react-icons/ai";
 
-const Header = () => {
+const Header = ({ user }) => {
   return (
     <React.Fragment>
       <div className="top-navbar">
@@ -25,21 +25,21 @@ const Header = () => {
           <h6 className="Login">
             <div className="social">
               <div className="icon">
-                <FaFacebookF />
-                <FaTwitter />
+                <FaFacebookSquare />
+                <FaTwitterSquare />
                 <FaLinkedin />
-                <FaInstagram />
+                <FaInstagramSquare />
               </div>
             </div>
-            <div className="user">
+            <div>
               <Link to="/login">
-                <Person className="icon" />
+                <Person />
               </Link>
             </div>
             Register |
             <div>
               <Link to="/login">
-                <AiOutlineAccountBook className="icon" />
+                <AiOutlineAccountBook />
               </Link>
             </div>
             Sign-in
@@ -65,7 +65,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="d_none">
-                    <Link to="/contact-us">
+                    <Link to="/contact">
                       <FaEnvelope /> contact@smbfurniture.in
                     </Link>
                   </li>

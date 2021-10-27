@@ -3,12 +3,11 @@
   display: flex;
   height: 100vh;
   width: 100vw;
-  position: fixed;
   top: 0%;
   left: 0%;
   max-width: 100%;
   background-color: white;
-  z-index: 6;
+  position: relative;
 }
 
 .profileContainer > div {
@@ -99,10 +98,12 @@
 @media screen and (max-width: 600px) {
   .profileContainer {
     flex-direction: column;
+    margin-top: 20px;
   }
 
   .profileContainer > div:first-child > h1 {
     font: 500 3.2vmax "Montserrat";
+    text-transform: capitalize;
     transform: translateY(-2vmax);
   }
 

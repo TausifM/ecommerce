@@ -75,9 +75,13 @@ export const register = (userData) => async (dispatch) => {
     dispatch({ type: REGISTER_USER_SUCCESS, payload: data.userData });
     localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
     dispatch({
       type: REGISTER_USER_FAIL,
-      payload: error.response.data.message,
+      payload: message,
     });
   }
 };
@@ -99,6 +103,7 @@ export const loadUser = () => async (dispatch) => {
     dispatch({ type: LOAD_USER_FAIL, payload: message });
   }
 };
+//to remove data typeerror && condition used above
 
 // Logout User
 export const logout = () => (dispatch) => {

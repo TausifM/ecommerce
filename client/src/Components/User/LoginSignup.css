@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto&display=swap");
-
-.loginSignUpContainer {
+.LoginSignUpContainer {
   width: 100vw;
   height: 100vh;
   max-width: 100%;
@@ -8,39 +6,39 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(231, 231, 231);
-  position: fixed;
+  position: relative;
   top: 0%;
   left: 0;
 }
 
-.loginSignUpBox {
+.LoginSignUpBox {
   background-color: white;
   width: 30vw;
   height: 70vh;
   box-sizing: border-box;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.219) 30px;
-  z-index: 7;
+  box-shadow: rgba(0, 0, 0, 0.267);
+  border-radius: 10px;
 }
 .login_signUp_toggle {
   display: flex;
-  height: 4vmax;
+  height: 3vmax;
 }
 .login_signUp_toggle > p {
   color: rgba(0, 0, 0, 0.678);
-  font: 1.8vmax "Montserrat";
+  font: 800 1.8vmax "Poppins";
   transition: all 0.5s;
   cursor: pointer;
   display: grid;
   place-items: center;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 .login_signUp_toggle > p:hover {
   color: tomato;
 }
 
-.loginSignUpBox > div > button {
+.LoginSignUpBox > div > button {
   background-color: tomato;
   height: 3px;
   width: 50%;
@@ -78,7 +76,7 @@
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.267);
   border-radius: 4px;
-  font: 1.4vmax "Roboto";
+  font: 400 1.3vmax "Roboto";
   outline: none;
 }
 
@@ -86,7 +84,7 @@
 .signUpForm > div > svg {
   position: absolute;
   transform: translateX(1vmax);
-  font-size: 1.9vmax;
+  font-size: 1.6vmax;
   color: rgba(0, 0, 0, 0.623);
 }
 
@@ -95,7 +93,7 @@
   text-decoration: none;
   align-self: flex-end;
   transition: all 0.5s;
-  font: 500 1.2vmax "Arial";
+  font: 700 1vmax "Arial";
 }
 
 .loginForm > a:hover {
@@ -118,7 +116,7 @@
   height: 5vh;
   border: none;
   margin: 0%;
-  font: 400 1.4vmax "Roboto";
+  font: 400 1.1vmax "Arial";
   transition: all 0.5s;
   padding: 0 1vmax;
   color: rgba(0, 0, 0, 0.623);
@@ -134,7 +132,7 @@
   border: none;
   background-color: tomato;
   color: white;
-  font: 1.5vmax "Montserrat";
+  font: 800 1.5vmax "Roboto";
   width: 100%;
   padding: 0.8vmax;
   cursor: pointer;
@@ -165,13 +163,10 @@
 }
 
 @media screen and (max-width: 600px) {
-  .loginSignUpContainer {
+  .LoginSignUpContainer {
     background-color: white;
-    width: 100%;
-    height: 100%;
-    margin-top: 20px;
   }
-  .loginSignUpBox {
+  .LoginSignUpBox {
     width: 100vw;
     height: 95vh;
   }
@@ -179,7 +174,7 @@
     height: 5vmax;
   }
   .login_signUp_toggle > p {
-    font: 500 2.1vmax "Roboto";
+    font: 800 1.9vmax "Roboto";
   }
 
   .loginForm,
@@ -190,7 +185,7 @@
   .loginForm > div > input,
   .signUpForm > div > input {
     padding: 2.5vmax 5vmax;
-    font: 300 2vmax cursive;
+    font: 400 1.7vmax "Roboto";
   }
 
   .loginForm > div > svg,
@@ -199,7 +194,7 @@
   }
 
   .loginForm > a {
-    font: 500 2vmax "Gill Sans";
+    font: 500 1.8vmax "Arial";
   }
 
   #registerImage > img {
@@ -209,12 +204,12 @@
 
   #registerImage > input::file-selector-button {
     height: 7vh;
-    font: 400 1.9vmax cursive;
+    font: 400 1.8vmax "Roboto";
   }
 
   .loginBtn,
   .signUpBtn {
-    font: 300 2vmax "Roboto";
+    font: 800 2.1vmax "Poppins";
     padding: 1.8vmax;
   }
 }

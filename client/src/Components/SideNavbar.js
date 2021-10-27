@@ -27,7 +27,7 @@ export const SidebarData = [
   },
   {
     title: "Contact-us",
-    path: "/contact-us",
+    path: "/contact",
     icon: <FaIcons.FaMobile className="icon" />,
     cName: "nav-text",
   },
@@ -45,17 +45,11 @@ function SideNavbar() {
   return (
     <div>
       <div className="navbar">
-        <Link to="#" className="menu-bars">
-          <img src={MenuBtn} onClick={showSidebar} alt="menu-btn" />
-        </Link>
+        <img src={MenuBtn} onClick={showSidebar} alt="menu-btn" />
       </div>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" onClick={showSidebar}>
-          <li className="navbar-toggle">
-            <Link to="#" className="menu-bars">
-              <AiIcons.AiOutlineClose className="close-btn" />
-            </Link>
-          </li>
+          <AiIcons.AiOutlineClose className="close-btn" />
           {SidebarData.map((item, index) => {
             return (
               <li key={index} className={item.cName}>

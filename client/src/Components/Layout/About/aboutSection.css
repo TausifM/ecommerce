@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 4fr 4fr;
   position: fixed;
+  position: relative;
 }
 
 .aboutSectionGradient {
@@ -32,7 +33,7 @@
 }
 
 .aboutSectionContainer > h1 {
-  font: 400 3vmax "Roboto";
+  font: 800 4vmax "Poppins";
   color: tomato;
   margin: 2vmax;
 }
@@ -53,7 +54,7 @@
 
 .aboutSectionContainer > div > div > p {
   color: rgba(0, 0, 0, 0.623);
-  font: 100 1vmax "Roboto";
+  font: 400 1.4vmax "Roboto";
 }
 
 .aboutSectionContainer > div > div > button {
@@ -61,7 +62,7 @@
 }
 
 .aboutSectionContainer > div > div > span {
-  font: 100 1vmax "Roboto";
+  font: 400 1.5vmax "Roboto";
   color: rgba(0, 0, 0, 0.616);
   text-align: center;
   width: 80%;
@@ -73,7 +74,7 @@
 
 .aboutSectionContainer2 > h2 {
   color: rgba(0, 0, 0, 0.623);
-  font: 100 2vmax "Roboto";
+  font: 400 2.4vmax "Roboto";
   margin: 2vmax;
 }
 
@@ -95,16 +96,16 @@
   }
 
   .aboutSectionContainer > h1 {
-    font: 400 5vmax "Roboto";
+    font: 800 5vmax "Poppins";
     margin: 3vmax;
   }
 
   .aboutSectionContainer > div > div > p {
-    font: 100 2vmax "Roboto";
+    font: 400 2.2vmax "Roboto";
   }
 
   .aboutSectionContainer > div > div > span {
-    font: 100 1.4vmax "Roboto";
+    font: 400 1.6vmax "Roboto";
     width: 70%;
   }
 
@@ -113,7 +114,7 @@
   }
 
   .aboutSectionContainer2 > h2 {
-    font: 100 3vmax "Roboto";
+    font: 400 3vmax "Roboto";
     margin: 2vmax;
   }
 

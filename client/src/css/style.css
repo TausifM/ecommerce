@@ -15,7 +15,6 @@ html {
 }
 
 a {
-  color: #1f1f1f;
   text-decoration: none !important;
   outline: none !important;
   -webkit-transition: all 0.3s ease-in-out;
@@ -40,21 +39,24 @@ h6 {
   color: #111111;
   margin: 0;
 }
-
-.top-navbar .top-navbar-container .Login {
-  display: flex;
-  padding-top: 5px;
-  justify-content: flex-end;
+.top-navbar {
+  margin: 0;
+  padding: 0;
 }
-.top-navbar .top-navbar-container .Login .icon {
-  font-size: 20px;
-  padding-right: 2px;
-  color: #540705;
-}
-.top-navbar .top-navbar-container .social .icon {
-  padding-right: 10px;
+.top-navbar-container .Login {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+}
+.top-navbar .top-navbar-container .social {
+  display: flex;
+  width: 50%;
+  color: #540705;
+  font-size: 15px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 h1 {
@@ -219,8 +221,21 @@ header {
   height: 105px;
   background: #8b1310;
   width: 100%;
-  padding: 33px 30px;
+  padding: 30px;
   z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+.head-top .container-fluid {
+  justify-content: center;
+  padding: none;
+  align-items: center;
+}
+.col-sm-3 a img {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
 }
 
 /** menu section **/
@@ -328,18 +343,6 @@ ul.email li img {
 .top_layer {
   position: relative;
 }
-
-/* .top_layer::before {
-     position: absolute;
-     width: 100%;
-     height: 260px;
-     content: "";
-     background: url(../images/croos.png);
-     background-size: 100% 100%;
-     background-position: center center;
-     background-repeat: no-repeat;
-     top: -257px;
-}*/
 
 .about {
   padding-top: 10px;
