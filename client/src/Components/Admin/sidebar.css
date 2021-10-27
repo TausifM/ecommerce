@@ -11,9 +11,10 @@
   padding: 0;
 }
 .sidebar > a > img {
-  width: 80%;
+  width: 90%;
   transition: all 0.5s;
   margin-left: 15px;
+  background-color: rgb(2, 2, 46);
 }
 
 .sidebar > a > img:hover {

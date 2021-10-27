@@ -8,6 +8,7 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaLinkedin,
+  FaPenFancy,
   FaPhone,
   FaSearch,
   FaTwitterSquare,
@@ -15,7 +16,6 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Person from "@material-ui/icons/Person";
-import { AiOutlineAccountBook } from "react-icons/ai";
 
 const Header = ({ user }) => {
   return (
@@ -31,18 +31,16 @@ const Header = ({ user }) => {
                 <FaInstagramSquare />
               </div>
             </div>
-            <div>
+            <div className="userLinks">
               <Link to="/login">
-                <Person />
+                <Person style={{ color: "green" }} />
               </Link>
-            </div>
-            Register |
-            <div>
+              Register |
               <Link to="/login">
-                <AiOutlineAccountBook />
+                <FaPenFancy style={{ color: "green" }} />
               </Link>
+              Sign-in
             </div>
-            Sign-in
           </h6>
         </div>
       </div>

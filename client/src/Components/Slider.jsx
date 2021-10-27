@@ -2,12 +2,12 @@ import React, { useState, useCallback, useRef } from "react";
 import RBCarousel from "react-bootstrap-carousel";
 import { Row, Col } from "./bootstrap-component";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
-import { Link } from "react-router-dom";
 
-const styles = { height: 400, width: "100%", opacity: "90%" };
+const styles = { 
+  height: 250, width: "100%", opacity: "90%" };
 
 function Slider() {
-  const [autoplay, /* setAutoplay */] = useState(false);
+  const [autoplay, /*setAutoplay */] = useState(false);
   const [icon, /*setIcon*/] = useState({});
   const slider_ref = useRef(null);
   const _onSelect = useCallback((active, direction) => {
@@ -18,7 +18,7 @@ function Slider() {
     <div className=" banner_main">
       <div className="container-fluid" style={{ paddingBottom: 5 }}>
         <Row>
-          <Col span={12} style={{ marginTop: 20 }}>
+          <Col span={12} style={{ marginTop: 20, zIndex: 1}}>
             <RBCarousel
               animation={true}
               autoplay={autoplay}
@@ -30,15 +30,39 @@ function Slider() {
               ref={slider_ref}
               version={4}
             >
-              <div style={{ height: 400 }}>
+              <div style={{ ...styles, height: 450 }}>
                 <img
                   style={{ width: "100%", height: "100%" }}
-                  src="https://www.w3schools.com/bootstrap/ny.jpg"
-                  alt=""
+                  src="https://res.cloudinary.com/smb-furniture/image/upload/v1635312424/Slider_Image/diwali_sale_smb_q5ohhl.jpg"
+                  alt="diwali sale smb"
                 />
-                <div className="carousel-caption">Image</div>
+                <div className="carousel-caption">Diwali sale</div>
               </div>
-              <div style={{ ...styles, backgroundColor: "white" }}>
+              <div style={{ ...styles, height: 450 }}>
+                <img
+                  style={{ width: "100%", height: "100%" }}
+                  src="https://res.cloudinary.com/smb-furniture/image/upload/v1635312913/Slider_Image/diwali_sale_smb2_khw1ya.jpg"
+                  alt="diwali sale smb"
+                />
+                <div className="carousel-caption">Diwali sale</div>
+              </div>
+              <div style={{ ...styles, height: 450 }}>
+                <img
+                  style={{ width: "100%", height: "100%" }}
+                  src="https://res.cloudinary.com/smb-furniture/image/upload/v1635313158/Slider_Image/diwali_sale_smb3_spcrpu.jpg"
+                  alt="diwali sale smb"
+                />
+                <div className="carousel-caption">Diwali sale</div>
+              </div>
+              <div style={{ height: 450 }}>
+                <img
+                  style={{ width: "100%", height: "100%" }}
+                  src="https://res.cloudinary.com/smb-furniture/image/upload/v1635312913/Slider_Image/diwali_sale_smb2_khw1ya.jpg"
+                  alt="diwali sale smb"
+                />
+                <div className="carousel-caption">Diwali sale</div>
+              </div>
+             {/*  <div style={{ ...styles, backgroundColor: "white" }}>
                 <div className="carousel-caption relative">
                   <div className="bg_white">
                     <h1 style={{ marginTop: "2rem" }}>
@@ -67,7 +91,7 @@ function Slider() {
               <div style={{ ...styles, backgroundColor: "lightblue" }}>
                 <div className="carousel-center"></div>
                 <div className="carousel-caption">Youtube</div>
-              </div>
+              </div> */}
             </RBCarousel>
           </Col>
         </Row>

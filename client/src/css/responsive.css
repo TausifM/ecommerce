@@ -150,6 +150,14 @@
   .padddd {
     padding-right: 15px;
   }
+  .userLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+    font: 400 1em sans-serif;
+    color: #540705;
+  }
 }
 
 @media (max-width: 575px) {
@@ -254,5 +262,13 @@
     padding: 0;
     justify-content: center;
     align-items: center;
+  }
+  .userLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    align-items: center;
+    font: 500 1em sans-serif;
+    color: #540705;
   }
 }
