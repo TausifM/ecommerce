@@ -3,7 +3,6 @@ import "../css/Products.css";
 import { useSelector, useDispatch } from "react-redux";
 import { clearErrors, getProduct } from "../actions/productAction.js";
 import Loader from "./Layout/Loader.js";
-import Pagination from "react-js-pagination";
 import Slider from "@mui/material/Slider";
 import { useAlert } from "react-alert";
 import Typography from "@material-ui/core/Typography";
@@ -26,31 +25,18 @@ const Products = ({ match }) => {
 
   const alert = useAlert();
 
-  const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([0, 25000]);
   const [category, setCategory] = useState("");
 
   const [ratings, setRatings] = useState(0);
 
-  const {
-    products,
-    loading,
-    error,
-    productsCount,
-    resultPerPage,
-    filteredProductsCount,
-  } = useSelector((state) => state.products);
+  const { products, loading, error } = useSelector((state) => state.products);
 
   const keyword = match.params.keyword;
-
-  const setCurrentPageNo = (e) => {
-    setCurrentPage(e);
-  };
 
   const priceHandler = (event, newPrice) => {
     setPrice(newPrice);
   };
-  let count = filteredProductsCount;
 
   useEffect(() => {
     if (error) {
@@ -58,8 +44,8 @@ const Products = ({ match }) => {
       dispatch(clearErrors());
     }
 
-    dispatch(getProduct(keyword, currentPage, price, category, ratings));
-  }, [dispatch, keyword, currentPage, price, category, ratings, alert, error]);
+    dispatch(getProduct(keyword, price, category, ratings));
+  }, [dispatch, keyword, price, category, ratings, alert, error]);
 
   return (
     <Fragment>
@@ -116,24 +102,7 @@ const Products = ({ match }) => {
               />
             </fieldset>
           </div>
-          {resultPerPage < count && (
-            <div className="paginationBox">
-              <Pagination
-                activePage={currentPage}
-                itemsCountPerPage={resultPerPage}
-                totalItemsCount={productsCount}
-                onChange={setCurrentPageNo}
-                nextPageText="Next"
-                prevPageText="Prev"
-                firstPageText="1st"
-                lastPageText="Last"
-                itemClass="page-item"
-                linkClass="page-link"
-                activeClass="pageItemActive"
-                activeLinkClass="pageLinkActive"
-              />
-            </div>
-          )}
+
           <Footer />
         </Fragment>
       )}

@@ -29,6 +29,6 @@
 }
 @media (max-width: 575px) {
   .mailBtn > button {
-    font: 400 3.5vmax "Roboto";
+    font: 400 2.3vmax "Roboto";
   }
 }

@@ -1,6 +1,7 @@
 .orderDetailsPage {
   background-color: white;
-  position: absolute;
+  position: relative;
+  z-index: 1;
 }
 
 .orderDetailsContainer > h1 {

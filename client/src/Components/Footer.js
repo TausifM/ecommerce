@@ -56,10 +56,11 @@ const Footer = () => {
                 <img src={FooterImg} alt="#" />
               </a>
               <p className="padd_flet40">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters,
+                We are team of like-minded designers, engineers, and artists –
+                all looking to make a difference in the world with our craft. We
+                focus on creating design that is visually stunning, yet not
+                cheap or overpriced. The results are elegant and practical, and
+                we do it with a lot of love and support. Design isn’t cheap.
               </p>
             </div>
           </div>
@@ -77,7 +78,7 @@ const Footer = () => {
                   <a href="/products">Shop</a>
                 </li>
                 <li>
-                  <a href="/contact-us">Contact Us</a>
+                  <a href="/contact">Contact Us</a>
                 </li>
               </ul>
             </div>

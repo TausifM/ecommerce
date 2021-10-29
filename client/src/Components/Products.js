@@ -1,7 +1,16 @@
+import { Rating } from "@material-ui/lab";
 import { Link } from "react-router-dom";
-import Rating from "./Product/Rating";
 import "../css/productCard.css";
+
 const ProductCard = ({ product }) => {
+  const options = {
+    size: "small",
+    margin: "normal",
+    padding: "normal",
+    value: product.ratings,
+    readOnly: true,
+    precision: 0.5,
+  };
   return (
     <>
       <Link to={`/product/${product._id}`}>
@@ -9,7 +18,11 @@ const ProductCard = ({ product }) => {
           <img src={product.images[0].url} alt={product.name} />
           <p>{product.name}</p>
           <div className="ratingStar">
-            <Rating rating={product.rating} numReviews={product.numReviews} />
+            <Rating
+              {...options}
+              rating={product.rating}
+              numReviews={product.numReviews}
+            />
             <span className="productCardSpan">
               ({product.numOfReviews} Reviews)
             </span>
