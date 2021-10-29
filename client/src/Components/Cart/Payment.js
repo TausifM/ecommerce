@@ -8,8 +8,8 @@ import {
   CardNumberElement,
   CardCvcElement,
   CardExpiryElement,
-  useStripe,
   useElements,
+  useStripe,
 } from "@stripe/react-stripe-js";
 
 import axios from "axios";

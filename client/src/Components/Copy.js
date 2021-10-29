@@ -7,8 +7,6 @@ import { useAlert } from "react-alert";
 import Typography from "@material-ui/core/Typography";
 import MetaData from "./Layout/MetaData.js";
 import ProductCard from "./Products";
-import "./csss/main.css";
-import "./csss/responsive.css";
 import {
   Accordion,
   AccordionDetails,

@@ -15,7 +15,7 @@ function Slider() {
   }, []);
 
   return (
-    <div className=" banner_main">
+    <div className="banner_main">
       <div className="container-fluid" style={{ paddingBottom: 5 }}>
         <Row>
           <Col span={12} style={{ marginTop: 20, zIndex: 1}}>
@@ -35,6 +35,7 @@ function Slider() {
                   style={{ width: "100%", height: "100%" }}
                   src="https://res.cloudinary.com/smb-furniture/image/upload/v1635312424/Slider_Image/diwali_sale_smb_q5ohhl.jpg"
                   alt="diwali sale smb"
+                  className="slider-img"
                 />
                 <div className="carousel-caption">Diwali sale</div>
               </div>

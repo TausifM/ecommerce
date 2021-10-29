@@ -9,10 +9,7 @@ const ProductCard = ({ product }) => {
           <img src={product.images[0].url} alt={product.name} />
           <p>{product.name}</p>
           <div className="ratingStar">
-            <Rating
-              rating={product.ratings}
-              numReviews={product.numReviews}
-            ></Rating>
+            <Rating rating={product.rating} numReviews={product.numReviews} />
             <span className="productCardSpan">
               ({product.numOfReviews} Reviews)
             </span>

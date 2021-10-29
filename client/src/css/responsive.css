@@ -171,7 +171,7 @@
   }
   .logo {
     display: block;
-    width: 120px;
+    width: 90px;
     float: left;
   }
   .email {
@@ -262,13 +262,22 @@
     padding: 0;
     justify-content: center;
     align-items: center;
+    width: 80%;
   }
   .userLinks {
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    width: 60%;
     align-items: center;
     font: 500 1em sans-serif;
     color: #540705;
+  }
+  .top-navbar-container .Login {
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 0;
+  }
+  .container-fluid .slider-img {
+    height: 50%;
   }
 }
