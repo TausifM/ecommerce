@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import WebFont from "webfontloader";
 import Home from "./Components/Home";
 import "./css/style.css";
 import "./css/responsive.css";
@@ -48,12 +49,20 @@ function App() {
   const [stripeApiKey, setStripeApiKey] = useState("");
 
   async function getStripeApiKey() {
-    const { data } = await axios.get("/api/v1/stripeapikey");
+    const { data } = await axios.get(
+      "http://backend.smbfurniture.in/api/v1/stripeapikey"
+    );
 
     setStripeApiKey(data.stripeApiKey);
   }
 
   useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ["Montserrat", "Poppins", "Roboto", "Arial", "sans-serif"],
+      },
+    });
+
     store.dispatch(loadUser());
 
     getStripeApiKey();

@@ -18,7 +18,7 @@ const About = () => {
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src="https://res.cloudinary.com/tripleayt/image/upload/v1631555947/products/jpyibarlaxawvcvqjv5b.png"
+              src="https://res.cloudinary.com/smb-furniture/image/upload/v1635605959/Founder/HozefaSMB_gbqn4o.jpg"
               alt="Founder"
             />
             <Typography>Abhishek Singh</Typography>
@@ -26,20 +26,20 @@ const About = () => {
               Visit Instagram
             </Button>
             <span>
-              This is a sample wesbite made by @meabhisingh. Only with the
-              purpose to teach MERN Stack on the channel 6 Pack Programmer
+              We are team of like-minded designers, engineers, and artists – all
+              looking to make a difference in the world with our craft. We focus
+              on creating design that is visually stunning, yet not cheap or
+              overpriced. The results are elegant and practical, and we do it
+              with a lot of love and support.
             </span>
           </div>
           <div className="aboutSectionContainer2">
             <Typography component="h2">Our Brands</Typography>
-            <a
-              href="https://www.youtube.com/channel/UCO7afj9AUo0zV69pqEYhcjw"
-              target="blank"
-            >
+            <a href="https://www.indiamart.com/smb-furniture/" target="blank">
               <YouTubeIcon className="youtubeSvgIcon" />
             </a>
 
-            <a href="https://instagram.com/meabhisingh" target="blank">
+            <a href="https://instagram.com/smb-furniture" target="blank">
               <InstagramIcon className="instagramSvgIcon" />
             </a>
           </div>
