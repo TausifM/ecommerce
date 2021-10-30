@@ -45,6 +45,8 @@
 .confirmCartItems {
   padding: 5vmax;
   padding-top: 2vmax;
+  height: 80vh;
+  position: relative;
 }
 
 .confirmCartItemsContainer {

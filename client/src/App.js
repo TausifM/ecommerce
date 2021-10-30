@@ -33,7 +33,6 @@ import ProductList from "./Components/Admin/ProductList";
 import Dashboard from "./Components/Admin/Dashboard";
 import About from "./Components/Layout/About/About";
 import Contact from "./Components/Layout/Contact/Contact";
-import Products from "./Components/Copy";
 import NotFound from "./Components/Layout/NotFound/NotFound";
 import Shipping from "./Components/Cart/Shipping";
 import ConfirmOrder from "./Components/Cart/ConfirmOrder";
@@ -42,6 +41,7 @@ import axios from "axios";
 import Payment from "./Components/Cart/Payment";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import Products from "./Components/ProductsScreen";
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
@@ -66,22 +66,22 @@ function App() {
       <Header />
       {isAuthenticated && <UserOptions user={user} />}
 
+      {stripeApiKey && (
+        <Elements stripe={loadStripe(stripeApiKey)}>
+          <ProtectedRoute exact path="/process/payment" component={Payment} />
+        </Elements>
+      )}
+
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/product/:id" component={ProductDetails} />
         <Route exact path="/products" component={Products} />
         <Route path="/products/:keyword" component={Products} />
-
         <Route exact path="/search" component={Search} />
-
         <Route exact path="/contact" component={Contact} />
-
         <Route exact path="/about" component={About} />
-
         <ProtectedRoute exact path="/account" component={Profile} />
-
         <ProtectedRoute exact path="/me/update" component={UpdateProfile} />
-
         <ProtectedRoute
           exact
           path="/password/update"
@@ -103,11 +103,6 @@ function App() {
         <ProtectedRoute exact path="/orders" component={MyOrders} />
 
         <ProtectedRoute exact path="/order/confirm" component={ConfirmOrder} />
-        {stripeApiKey && (
-          <Elements stripe={loadStripe(stripeApiKey)}>
-            <ProtectedRoute exact path="/process/payment" component={Payment} />
-          </Elements>
-        )}
 
         <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
 

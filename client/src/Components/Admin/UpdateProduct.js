@@ -40,13 +40,13 @@ const UpdateProduct = ({ match }) => {
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "Laptop",
-    "Footwear",
-    "Bottom",
-    "Tops",
-    "Attire",
-    "Camera",
-    "SmartPhones",
+    "Chairs",
+    "Bed",
+    "Sofa",
+    "Plywood",
+    "Mattresses",
+    "Kids Room",
+    "Bed Room",
   ];
 
   const productId = match.params.id;

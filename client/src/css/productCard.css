@@ -29,21 +29,17 @@
   align-items: center;
   left: 0;
 }
-.productCard > div {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 0.7vmax;
-}
+
 .productCard > div > span {
+  margin: 0;
+  padding: 0;
+  font: 600 1.2vmax "Arial", "sans-serif";
   display: flex;
-  flex-direction: row;
-  margin: 0.5vmax;
-  font: 400 0.5vmax "Arial", "sans-serif";
-  font-size: 1vmax;
+  justify-content: first baseline;
+  align-items: baseline;
 }
 .productCard > p {
-  font-family: "Arial", "sans-serif";
-  font-size: 1.5vmax;
+  font: 700 1.5vmax "Poppins", "sans-serif";
   margin: 1vmax 0.5vmax;
   margin-bottom: 0;
 }
@@ -77,19 +73,24 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
   }
   .productCard > p {
-    font-size: 1.7vmax;
+    font: 2vmax "Poppins", "sans-serif";
   }
   .productCard > div {
     margin: 0vmax;
     display: block;
   }
   .productCard > span {
-    font-size: 1.54vmax;
+    font-size: 1.6vmax;
+    display: flex;
+    justify-content: first baseline;
+    align-items: baseline;
   }
   .productCard > div > span {
     margin: 0 0.5vmax;
-    font: 300 1vmax "Roboto";
+    font: 400 1.3vmax "Roboto";
   }
 }

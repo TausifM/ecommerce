@@ -13,7 +13,7 @@
   align-items: center;
   padding: 2vmax;
   box-sizing: border-box;
-  border: 2px dotted rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
 }
 .ProductDetails > div:last-child {
   align-items: flex-start;
@@ -41,7 +41,7 @@
 
 .detailsBlock-3 > h1 {
   color: rgba(17, 17, 17, 0.795);
-  font: 400 1.8vmax "Franklin Gothic Medium";
+  font: 700 2.3vmax "Franklin Gothic Medium";
   margin: 1vmax 0;
 }
 .detailsBlock-3-1 {
@@ -52,6 +52,7 @@
   border: none;
   background-color: rgba(0, 0, 0, 0.616);
   padding: 0.5vmax;
+  font: 600 1.6vmax "Poppins";
   cursor: pointer;
   color: white;
   transition: all 0.5s;
@@ -75,7 +76,8 @@
   color: white;
   transition: all 0.5s;
   background-color: tomato;
-  font: 500 1.5vmax "Roboto";
+  font: 600 1.6vmax "Poppins";
+
   border-radius: 20px;
   padding: 0.5vmax 2vmax;
   margin: 1vmax;
@@ -95,7 +97,7 @@
 .submitReview {
   border: none;
   background-color: tomato;
-  font: 500 1.8vmax "Roboto";
+  font: 700 1.8vmax "Poppins";
   border-radius: 20px;
   padding: 0.6vmax 2vmax;
   margin: 1vmax 0;
@@ -123,7 +125,7 @@
 
 .reviewsHeading {
   color: #000000be;
-  font: 500 1.5vmax "Roboto";
+  font: 700 1.8vmax "Poppins";
   text-align: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.226);
   padding: 1vmax;
@@ -152,15 +154,15 @@
 }
 .reviewCard > p {
   color: rgba(0, 0, 0, 0.836);
-  font: 600 1.4vmax "Roboto";
+  font: 600 1.4vmax "Poppins";
 }
 .reviewCardComment {
   color: rgba(0, 0, 0, 0.445);
-  font: 300 1.2vmax cursive;
+  font: 500 1.2vmax "Arial";
 }
 
 .noReviews {
-  font: 400 1.5vmax "Gill Sans";
+  font: 600 1.5vmax "Roboto";
   text-align: center;
   color: rgba(0, 0, 0, 0.548);
 }
@@ -247,6 +249,6 @@
     font: 600 3vw "Roboto";
   }
   .reviewCardComment {
-    font: 500 5vw cursive;
+    font: 500 5vw "Arial";
   }
 }

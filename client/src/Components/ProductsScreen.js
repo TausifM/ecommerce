@@ -1,15 +1,21 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "../css/Products.css";
 import { useSelector, useDispatch } from "react-redux";
-import { clearErrors, getProduct } from "../actions/productAction.js";
-import Loader from "./Layout/Loader.js";
-import Slider from "@mui/material/Slider";
+import { clearErrors, getProduct } from "../actions/productAction";
+import Loader from "./Layout/Loader";
+import ProductCard from "./Products";
+import Pagination from "react-js-pagination";
 import { useAlert } from "react-alert";
 import Typography from "@material-ui/core/Typography";
-import MetaData from "./Layout/MetaData.js";
-import Header from "./Header";
-import Footer from "./Footer";
-import ProductCard from "./Products";
+import MetaData from "./Layout/MetaData";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Link,
+} from "@material-ui/core";
+import { FaArrowDown } from "react-icons/fa";
+
 const categories = [
   "Chairs",
   "Bed",
@@ -19,24 +25,36 @@ const categories = [
   "Kids Room",
   "Bed Room",
 ];
+const matteressCategory = [
+  "Single Bed Matteresses",
+  "Queen Bed Matteresses",
+  "King Bed Matteresses",
+];
 
 const Products = ({ match }) => {
   const dispatch = useDispatch();
 
   const alert = useAlert();
 
-  const [price, setPrice] = useState([0, 25000]);
+  const [currentPage, setCurrentPage] = useState(1);
   const [category, setCategory] = useState("");
 
-  const [ratings, setRatings] = useState(0);
-
-  const { products, loading, error } = useSelector((state) => state.products);
+  const {
+    products,
+    loading,
+    error,
+    productsCount,
+    resultPerPage,
+    filteredProductsCount,
+  } = useSelector((state) => state.products);
 
   const keyword = match.params.keyword;
 
-  const priceHandler = (event, newPrice) => {
-    setPrice(newPrice);
+  const setCurrentPageNo = (e) => {
+    setCurrentPage(e);
   };
+
+  let count = filteredProductsCount;
 
   useEffect(() => {
     if (error) {
@@ -44,8 +62,8 @@ const Products = ({ match }) => {
       dispatch(clearErrors());
     }
 
-    dispatch(getProduct(keyword, price, category, ratings));
-  }, [dispatch, keyword, price, category, ratings, alert, error]);
+    dispatch(getProduct(keyword, currentPage, category));
+  }, [dispatch, keyword, currentPage, category, alert, error]);
 
   return (
     <Fragment>
@@ -54,56 +72,79 @@ const Products = ({ match }) => {
       ) : (
         <Fragment>
           <MetaData title="PRODUCTS -- ECOMMERCE" />
-          <Header />
           <h2 className="productsHeading">Products</h2>
-
-          <div className="products">
-            {products &&
-              products.map((product) => (
-                <ProductCard key={product._id} product={product} />
-              ))}
-          </div>
-
-          <div className="filterBox">
-            <Typography>Price</Typography>
-            <Slider
-              value={price}
-              onChange={priceHandler}
-              valueLabelDisplay="auto"
-              aria-labelledby="range-slider"
-              min={0}
-              max={25000}
-            />
-
-            <Typography>Categories</Typography>
-            <ul className="categoryBox">
-              {categories.map((category) => (
-                <li
-                  className="category-link"
-                  key={category}
-                  onClick={() => setCategory(category)}
-                >
-                  {category}
+          <div className="Scontainer">
+            <div className="filterBox">
+              <h3>Categories</h3>
+              <ul className="categoryBox">
+                {categories.map((category) => (
+                  <li
+                    className="category-link"
+                    key={category}
+                    onClick={() => setCategory(category)}
+                  >
+                    {category}
+                  </li>
+                ))}
+                <li>
+                  <div>
+                    <Accordion
+                      className="panel-body"
+                      style={{ marginTop: "5px" }}
+                    >
+                      <AccordionSummary
+                        expandIcon={<FaArrowDown />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                      >
+                        <Typography>Mattresses</Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography>
+                          <ul>
+                            {matteressCategory.map((mattress) => (
+                              <li
+                                className="category-link"
+                                key={mattress}
+                                onClick={() => setCategory(mattress)}
+                              >
+                                <Link to="/mattress">{mattress}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                  </div>
                 </li>
-              ))}
-            </ul>
+              </ul>
+            </div>
+            <div className="products">
+              {products &&
+                products.map((product) => (
+                  <ProductCard key={product._id} product={product} />
+                ))}
+            </div>
 
-            <fieldset>
-              <Typography component="legend">Ratings Above</Typography>
-              <Slider
-                value={ratings}
-                onChange={(e, newRating) => {
-                  setRatings(newRating);
-                }}
-                aria-labelledby="continuous-slider"
-                valueLabelDisplay="auto"
-                min={0}
-                max={5}
-              />
-            </fieldset>
+            {resultPerPage < count && (
+              <div className="paginationBox">
+                <Pagination
+                  activePage={currentPage}
+                  itemsCountPerPage={resultPerPage}
+                  totalItemsCount={productsCount}
+                  onChange={setCurrentPageNo}
+                  nextPageText="Next"
+                  prevPageText="Prev"
+                  firstPageText="1st"
+                  lastPageText="Last"
+                  itemClass="page-item"
+                  linkClass="page-link"
+                  activeClass="pageItemActive"
+                  activeLinkClass="pageLinkActive"
+                />
+              </div>
+            )}
           </div>
-
-          <Footer />
         </Fragment>
       )}
     </Fragment>

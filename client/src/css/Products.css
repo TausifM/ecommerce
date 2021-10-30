@@ -1,19 +1,28 @@
+.Scontainer {
+  display: flex;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
 .productsHeading {
   margin: 2vmax auto;
   width: 15vw;
   border-bottom: 1px solid rgba(0, 0, 0, 0.171);
   padding: 2vmax;
   color: rgba(0, 0, 0, 0.678);
-  font: 500 4vmax "Roboto";
+  font: 500 4vmax "Poppins";
   text-align: center;
 }
 
 .products {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   padding: 0 5vmax;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
   min-height: 30vh;
+  position: relative;
 }
 
 .paginationBox {
@@ -68,10 +77,9 @@
 
 .filterBox {
   width: 14vmax;
-  position: absolute;
   top: 10vmax;
   left: 0vmax;
-  background-color: rgb(255, 236, 188);
+  background-color: rgb(255, 255, 255);
   height: 100vh;
 }
 

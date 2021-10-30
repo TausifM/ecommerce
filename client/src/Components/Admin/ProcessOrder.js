@@ -15,6 +15,7 @@ import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import { Button } from "@material-ui/core";
 import { UPDATE_ORDER_RESET } from "../../constants/orderConstants";
 import "./processOrder.css";
+const color = ["redColor", "greenColor"];
 
 const ProcessOrder = ({ match }) => {
   const { order, error, loading } = useSelector((state) => state.orderDetails);
@@ -98,7 +99,9 @@ const ProcessOrder = ({ match }) => {
                           order.paymentInfo &&
                           order.paymentInfo.status === "succeeded"
                             ? "greenColor"
-                            : "redColor"
+                            : { ...color }
+                            ? "redColor"
+                            : { ...color }
                         }
                       >
                         {order.paymentInfo &&

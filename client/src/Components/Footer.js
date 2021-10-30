@@ -60,7 +60,7 @@ const Footer = () => {
                 all looking to make a difference in the world with our craft. We
                 focus on creating design that is visually stunning, yet not
                 cheap or overpriced. The results are elegant and practical, and
-                we do it with a lot of love and support. Design isn’t cheap.
+                we do it with a lot of love and support.
               </p>
             </div>
           </div>

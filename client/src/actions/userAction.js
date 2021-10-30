@@ -9,6 +9,7 @@ import {
   LOAD_USER_SUCCESS,
   LOAD_USER_FAIL,
   LOGOUT_SUCCESS,
+  LOGOUT_FAIL,
   UPDATE_PROFILE_REQUEST,
   UPDATE_PROFILE_SUCCESS,
   UPDATE_PROFILE_FAIL,
@@ -38,7 +39,7 @@ import {
 import axios from "axios";
 
 // Login
-export const login = (email, password) => async (dispatch, getState) => {
+export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_REQUEST });
 
@@ -51,15 +52,8 @@ export const login = (email, password) => async (dispatch, getState) => {
     );
 
     dispatch({ type: LOGIN_SUCCESS, payload: data.user });
-    localStorage.setItem("userInfo", JSON.stringify(getState().user.avatar));
   } catch (error) {
-    dispatch({
-      type: LOGIN_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
-    });
+    dispatch({ type: LOGIN_FAIL, payload: error.response.data.message });
   }
 };
 
@@ -72,16 +66,11 @@ export const register = (userData) => async (dispatch) => {
 
     const { data } = await axios.post(`/api/v1/register`, userData, config);
 
-    dispatch({ type: REGISTER_USER_SUCCESS, payload: data.userData });
-    localStorage.setItem("userInfo", JSON.stringify(data));
+    dispatch({ type: REGISTER_USER_SUCCESS, payload: data.user });
   } catch (error) {
-    const message =
-      error.response && error.response.data.message
-        ? error.response.data.message
-        : error.message;
     dispatch({
       type: REGISTER_USER_FAIL,
-      payload: message,
+      payload: error.response.data.message,
     });
   }
 };
@@ -94,21 +83,20 @@ export const loadUser = () => async (dispatch) => {
     const { data } = await axios.get(`/api/v1/me`);
 
     dispatch({ type: LOAD_USER_SUCCESS, payload: data.user });
-    localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
-    const message =
-      error.response && error.response.data.message
-        ? error.response.data.message
-        : error.message;
-    dispatch({ type: LOAD_USER_FAIL, payload: message });
+    dispatch({ type: LOAD_USER_FAIL, payload: error.response.data.message });
   }
 };
-//to remove data typeerror && condition used above
 
 // Logout User
-export const logout = () => (dispatch) => {
-  localStorage.removeItem("userInfo");
-  dispatch({ type: LOGOUT_SUCCESS });
+export const logout = () => async (dispatch) => {
+  try {
+    await axios.get(`/api/v1/logout`);
+
+    dispatch({ type: LOGOUT_SUCCESS });
+  } catch (error) {
+    dispatch({ type: LOGOUT_FAIL, payload: error.response.data.message });
+  }
 };
 
 // Update Profile

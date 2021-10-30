@@ -3,7 +3,12 @@
   padding: 3vmax;
   background-color: white;
 }
-
+.greenColor {
+  color: green;
+}
+.redColor {
+  color: red;
+}
 .updateOrderForm > div {
   display: flex;
   width: 100%;
@@ -16,7 +21,7 @@
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.267);
   border-radius: 4px;
-  font: 300 0.9vmax cursive;
+  font: 500 1.3vmax "Roboto";
   outline: none;
 }
 
@@ -34,7 +39,7 @@
 
   .updateOrderForm > div > select {
     padding: 2.5vmax 5vmax;
-    font: 300 1.7vmax cursive;
+    font: 400 1.7vmax "Roboto";
   }
 
   .updateOrderForm > div > svg {
