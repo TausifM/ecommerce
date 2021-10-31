@@ -1,5 +1,5 @@
 .confirmOrderPage {
-  height: 100vh;
+  height: 120vh;
   background-color: white;
   display: grid;
   grid-template-columns: 6fr 3fr;

@@ -32,7 +32,7 @@ const Home = () => {
         <Fragment>
           <Slider />
           <h2 className="feature-title">FEATURED PRODUCTS</h2>
-          <div className="container-product" id="container-product">
+          <div className="container-product">
             {products &&
               products.map((product) => (
                 <Products product={product} key={product._id} />

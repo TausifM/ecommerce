@@ -50,6 +50,7 @@
   .productReviewsContainer {
     border-left: none;
     border-top: 1px solid rgba(0, 0, 0, 0.158);
+    margin-bottom: 120px;
   }
   .productReviewsForm > div > input {
     padding: 2.5vmax 5vmax;

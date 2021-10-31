@@ -19,7 +19,7 @@ import { FaArrowDown } from "react-icons/fa";
 const categories = [
   "Chairs",
   "Bed",
-  "Furniture",
+  "Sofa",
   "Plywood",
   "Mattresses",
   "Kids Room",

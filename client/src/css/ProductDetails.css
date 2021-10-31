@@ -68,7 +68,7 @@
   outline: none;
   font: 400 1.5vmax "Roboto";
   color: rgba(0, 0, 0, 0.74);
-  background-color: rgb(255, 228, 228);
+  background-color: rgb(255, 255, 255);
 }
 .detailsBlock-3-1 > button:last-child {
   border: none;
@@ -178,24 +178,27 @@
   }
 
   .detailsBlock-1 > h2 {
-    font-size: 2.8vmax;
+    font: 700 2.8vmax "Poppins";
     text-align: center;
   }
 
   .detailsBlock-1 > p {
     text-align: center;
-    font-size: 1vmax;
+    font: 700 1.8vmax "Roboto";
   }
 
   .detailsBlock-2 {
     justify-content: center;
+    align-items: center;
   }
   .detailsBlock-2 > span {
-    font-size: 1.5vmax;
+    font-size: 2.5vmax;
+    margin: 0.2vmax;
+    padding: 0;
   }
 
   .detailsBlock-3 > h1 {
-    font: 700 3vmax "Franklin Gothic Medium";
+    font: 700 3.5vmax "Poppins";
     text-align: center;
   }
 
@@ -212,13 +215,14 @@
   }
 
   .detailsBlock-3-1-1 > input {
-    padding: 1.5vmax;
-    width: 3vmax;
-    font: 400 1.8vmax "Roboto";
+    padding: 1.4vmax;
+    width: 5vmax;
+    font: 400 2vmax "Roboto";
+    background-color: #fff;
   }
 
   .detailsBlock-3-1 > button:last-child {
-    font: 500 1.7vmax "Roboto";
+    font: 700 2vmax "Poppins";
     padding: 1.5vmax;
     width: 20vmax;
     margin: 3vmax 0;
@@ -227,28 +231,30 @@
   .detailsBlock-3 > p {
     padding: 2.5vmax 0;
     text-align: center;
-    font: 400 2vmax "Roboto";
+    font: 600 2vmax "Roboto";
   }
 
   .detailsBlock-4 {
-    font: 500 2.5vmax sans-serif;
+    font: 700 2.5vmax sans-serif;
   }
 
   .detailsBlock-4 > p {
-    font: 300 1.8vmax sans-serif;
+    font: 400 1.8vmax sans-serif;
   }
 
   .submitReview {
-    font: 500 2vmax "Roboto";
+    font: 700 2vmax "Poppins";
     padding: 1.5vmax;
     width: 20vmax;
     margin: 3vmax 0;
   }
-
+  .reviewCard {
+    width: 60%;
+  }
   .reviewCard > p {
-    font: 600 3vw "Roboto";
+    font: 600 3vw "Poppins";
   }
   .reviewCardComment {
-    font: 500 5vw "Arial";
+    font: 500 2.5vw "Arial";
   }
 }

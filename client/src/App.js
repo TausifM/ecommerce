@@ -49,9 +49,7 @@ function App() {
   const [stripeApiKey, setStripeApiKey] = useState("");
 
   async function getStripeApiKey() {
-    const { data } = await axios.get(
-      "http://backend.smbfurniture.in/api/v1/stripeapikey"
-    );
+    const { data } = await axios.get("/api/v1/stripeapikey");
 
     setStripeApiKey(data.stripeApiKey);
   }
@@ -59,12 +57,12 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Montserrat", "Poppins", "Roboto", "Arial", "sans-serif"],
+        families: ["Monsrat", "Poppins", "Roboto", "Arial"],
       },
     });
 
     store.dispatch(loadUser());
-
+    localStorage.setItem("user", JSON.stringify(""));
     getStripeApiKey();
   }, []);
 
@@ -74,7 +72,6 @@ function App() {
     <Router>
       <Header />
       {isAuthenticated && <UserOptions user={user} />}
-
       {stripeApiKey && (
         <Elements stripe={loadStripe(stripeApiKey)}>
           <ProtectedRoute exact path="/process/payment" component={Payment} />

@@ -34,9 +34,7 @@ import {
 export const getProduct = () => async (dispatch) => {
   try {
     dispatch({ type: ALL_PRODUCT_REQUEST });
-    const { data } = await axios.get(
-      "http://backend.smbfurniture.in/api/v1/products"
-    );
+    const { data } = await axios.get("/api/v1/products");
     dispatch({
       type: ALL_PRODUCT_SUCCESS,
       payload: data,
@@ -54,9 +52,7 @@ export const getAdminProduct = () => async (dispatch) => {
   try {
     dispatch({ type: ADMIN_PRODUCT_REQUEST });
 
-    const { data } = await axios.get(
-      "http://backend.smbfurniture.in/api/v1/admin/products"
-    );
+    const { data } = await axios.get("/api/v1/admin/products");
 
     dispatch({
       type: ADMIN_PRODUCT_SUCCESS,
@@ -80,7 +76,7 @@ export const createProduct = (productData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `http://backend.smbfurniture.in/api/v1/admin/product/new`,
+      `/api/v1/admin/product/new`,
       productData,
       config
     );
@@ -107,7 +103,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `http://backend.smbfurniture.in/api/v1/admin/product/${id}`,
+      `/api/v1/admin/product/${id}`,
       productData,
       config
     );
@@ -129,9 +125,7 @@ export const deleteProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
 
-    const { data } = await axios.delete(
-      `http://backend.smbfurniture.in/api/v1/admin/product/${id}`
-    );
+    const { data } = await axios.delete(`/api/v1/admin/product/${id}`);
 
     dispatch({
       type: DELETE_PRODUCT_SUCCESS,
@@ -150,9 +144,7 @@ export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-    const { data } = await axios.get(
-      `http://backend.smbfurniture.in/api/v1/product/${id}`
-    );
+    const { data } = await axios.get(`/api/v1/product/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
@@ -175,11 +167,7 @@ export const newReview = (reviewData) => async (dispatch) => {
       headers: { "Content-Type": "application/json" },
     };
 
-    const { data } = await axios.put(
-      `http://backend.smbfurniture.in/api/v1/review`,
-      reviewData,
-      config
-    );
+    const { data } = await axios.put(`/api/v1/review`, reviewData, config);
 
     dispatch({
       type: NEW_REVIEW_SUCCESS,
@@ -198,9 +186,7 @@ export const getAllReviews = (id) => async (dispatch) => {
   try {
     dispatch({ type: ALL_REVIEW_REQUEST });
 
-    const { data } = await axios.get(
-      `http://backend.smbfurniture.in/api/v1/reviews?id=${id}`
-    );
+    const { data } = await axios.get(`/api/v1/reviews?id=${id}`);
 
     dispatch({
       type: ALL_REVIEW_SUCCESS,
@@ -220,7 +206,7 @@ export const deleteReviews = (reviewId, productId) => async (dispatch) => {
     dispatch({ type: DELETE_REVIEW_REQUEST });
 
     const { data } = await axios.delete(
-      `http://backend.smbfurniture.in/api/v1/reviews?id=${reviewId}&productId=${productId}`
+      `/api/v1/reviews?id=${reviewId}&productId=${productId}`
     );
 
     dispatch({

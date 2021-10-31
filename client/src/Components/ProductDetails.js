@@ -127,7 +127,7 @@ const ProductDetails = ({ match }) => {
               </div>
               <div className="detailsBlock-2">
                 <Rating {...options}></Rating>
-                <span className="detailsBlock-2-span">
+                <span className="detailsBlock-2">
                   {product.numOfReviews} Reviews
                 </span>
               </div>
