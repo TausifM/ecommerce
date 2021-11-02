@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 const cloudinary = require("cloudinary");
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
+const path = require("path");
 
 const app = express();
 app.use(express.json());
@@ -41,8 +42,15 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./client/build/index.html"));
+});
+
 // Middleware
 app.use(errorMiddleware);
+
 //Handle uncaught exception
 process.on("uncaughtException", (err) => {
   console.log(`error: ${err.message}`);

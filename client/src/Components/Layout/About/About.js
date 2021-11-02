@@ -21,7 +21,7 @@ const About = () => {
               src="https://res.cloudinary.com/smb-furniture/image/upload/v1635605959/Founder/HozefaSMB_gbqn4o.jpg"
               alt="Founder"
             />
-            <Typography>Abhishek Singh</Typography>
+            <Typography>Hozefa Bohra</Typography>
             <Button onClick={visitInstagram} color="primary">
               Visit Instagram
             </Button>

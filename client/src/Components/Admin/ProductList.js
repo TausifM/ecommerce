@@ -20,7 +20,6 @@ import { DELETE_PRODUCT_RESET } from "../../constants/productConstants";
 const ProductList = () => {
   const history = useHistory();
   const dispatch = useDispatch();
-
   const alert = useAlert();
 
   const { error, products } = useSelector((state) => state.products);

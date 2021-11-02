@@ -106,8 +106,8 @@ const Footer = () => {
             <div className="reader">
               <h3>Contact Us</h3>
               <p>
-                It is a lon <br /> g established fact that a reader will be
-                distracted by the readable content of a page when looking at its{" "}
+                Email: <br />
+                contactsmbfurniture.in
               </p>
             </div>
           </div>
@@ -118,8 +118,8 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-10 offset-md-1">
               <p>
-                Copyright 2021 All Right Reserved By{" "}
-                <a href="https://smbfurniture.in"> SMBFurniture</a>
+                Copyright 2021 All Right Reserved By
+                <a href="https://smbfurniture.in"> SMB Furniture</a>
               </p>
             </div>
           </div>

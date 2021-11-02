@@ -6,8 +6,10 @@ import { addItemsToCart, removeItemsFromCart } from "../../actions/cartAction";
 import { Typography } from "@material-ui/core";
 import RemoveShoppingCartIcon from "@material-ui/icons/RemoveShoppingCart";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
 
-const Cart = ({ history }) => {
+const Cart = () => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
 

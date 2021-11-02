@@ -14,6 +14,12 @@ import "./UserOptions.css";
 import { Home } from "@material-ui/icons";
 
 const UserOptions = ({ user }) => {
+  const userPace = ({ user }) => {
+    user.role = "admin";
+  };
+  const userAvatar = ({ user }) => {
+    user.avatar = user.avatar.url;
+  };
   const { cartItems } = useSelector((state) => state.cart);
   const [open, setOpen] = useState(false);
   const history = useHistory();
@@ -37,7 +43,7 @@ const UserOptions = ({ user }) => {
     { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser },
   ];
 
-  if (user.role === "admin") {
+  if (userPace) {
     options.unshift({
       icon: <DashboardIcon />,
       name: "Dashboard",
@@ -81,7 +87,7 @@ const UserOptions = ({ user }) => {
         icon={
           <img
             className="speedDialIcon"
-            src={user.avatar.url ? user.avatar.url : "/profile.png"}
+            src={userAvatar ? userAvatar : "/profile.png"}
             alt="Profile"
           />
         }

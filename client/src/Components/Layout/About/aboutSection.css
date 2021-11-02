@@ -23,7 +23,7 @@
   top: 50%;
   background-color: rgb(255, 255, 255);
   width: 80vw;
-  height: 80vh;
+  height: 90vh;
   transform: translateX(-50%) translateY(-50%);
   box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.192);
 
@@ -101,11 +101,11 @@
   }
 
   .aboutSectionContainer > div > div > p {
-    font: 400 2.2vmax "Roboto";
+    font: 600 2.8vmax "Roboto";
   }
 
   .aboutSectionContainer > div > div > span {
-    font: 400 1.6vmax "Roboto";
+    font: 400 2vmax "Roboto";
     width: 70%;
   }
 

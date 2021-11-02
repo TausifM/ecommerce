@@ -20,8 +20,8 @@
   margin: auto;
   padding: 3vmax;
   justify-content: space-evenly;
-  height: 70%;
-  width: 40vh;
+  height: 80%;
+  width: 50vh;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
 }
@@ -63,7 +63,7 @@
   height: 5vh;
   border: none;
   margin: 0%;
-  font: 400 0.8vmax cursive;
+  font: 600 0.8vmax "Arial";
   transition: all 0.5s;
   padding: 0 1vmax;
   color: rgba(0, 0, 0, 0.623);
@@ -80,8 +80,8 @@
 }
 
 #createProductFormImage > img {
-  width: 3vmax;
-  margin: 0 0.5vmax;
+  width: 5vmax;
+  margin: 0 2vmax;
 }
 #createProductBtn {
   border: none;
