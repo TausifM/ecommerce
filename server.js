@@ -8,7 +8,6 @@ const cloudinary = require("cloudinary");
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
 const path = require("path");
-
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -37,10 +36,10 @@ const user = require("./routes/userRouter.js");
 const order = require("./routes/orderRoute.js");
 const payment = require("./routes/paymentRoute.js");
 //Routes
-app.use("/api/v1", product);
-app.use("/api/v1", user);
-app.use("/api/v1", order);
-app.use("/api/v1", payment);
+app.use("/v1", product);
+app.use("/v1", user);
+app.use("/v1", order);
+app.use("/v1", payment);
 
 app.use(express.static(path.join(__dirname, "./client/build")));
 

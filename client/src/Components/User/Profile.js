@@ -5,12 +5,15 @@ import Loader from "../Layout/Loader";
 import { Link } from "react-router-dom";
 import "./Profile.css";
 import { clearErrors } from "../../actions/userAction";
-
-const Profile = ({ history }) => {
+import { useHistory } from "react-router-dom";
+const Profile = () => {
   const { user, loading, error, isAuthenticated } = useSelector(
     (state) => state.user
   );
-
+  const history = useHistory();
+  const userAvatar = ({ user }) => {
+    user.avatar = user.avatar.url;
+  };
   const dispatch = useDispatch();
   useEffect(() => {
     if (isAuthenticated === false) {
@@ -32,7 +35,7 @@ const Profile = ({ history }) => {
           <div className="profileContainer">
             <div>
               <h1>My Profile</h1>
-              <img src={user.avatar.url} alt={user.name} />
+              <img src={userAvatar} alt={user.name} />
               <Link to="/me/update">Edit Profile</Link>
             </div>
             <div>

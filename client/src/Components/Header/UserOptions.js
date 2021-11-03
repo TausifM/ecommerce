@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./UserOptions.css";
 import { Home } from "@material-ui/icons";
 
-const UserOptions = ({ user }) => {
+const UserOptions = () => {
   const userPace = ({ user }) => {
     user.role = "admin";
   };

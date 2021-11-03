@@ -42,14 +42,14 @@ import Payment from "./Components/Cart/Payment";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import Products from "./Components/ProductsScreen";
-import app from "./utils/axiosConfig";
+import { app } from "./utils/axiosConfig";
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
   const [stripeApiKey, setStripeApiKey] = useState("");
 
   async function getStripeApiKey() {
-    const { data } = await app.get("/api/v1/stripeapikey");
+    const { data } = await app.get("/v1/stripeapikey");
 
     setStripeApiKey(data.stripeApiKey);
   }

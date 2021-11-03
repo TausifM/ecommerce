@@ -16,7 +16,7 @@ import CreditCardIcon from "@material-ui/icons/CreditCard";
 import EventIcon from "@material-ui/icons/Event";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
 import { createOrder, clearErrors } from "../../actions/orderAction";
-import app from "../../utils/axiosConfig";
+import { app } from "../../utils/axiosConfig";
 import { useHistory } from "react-router";
 
 const Payment = () => {
@@ -58,7 +58,7 @@ const Payment = () => {
         },
       };
       const { data } = await app.post(
-        "/api/v1/payment/process",
+        "/v1/payment/process",
         paymentData,
         config
       );
