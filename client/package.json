@@ -1,6 +1,5 @@
 {
   "name": "client",
-  "homepage": "https://smbfurniture.in",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,6 +21,7 @@
     "chart.js": "^3.6.0",
     "clsx": "^1.1.1",
     "country-state-city": "^3.0.1",
+    "overlay-navbar": "^1.1.1",
     "react": "^17.0.2",
     "react-alert": "^7.0.3",
     "react-alert-template-basic": "^1.0.2",
@@ -39,7 +39,6 @@
     "redux": "^4.1.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
-    "source-map-explorer": "^2.5.2",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2",
     "webfontloader": "^1.6.28"
@@ -68,5 +67,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://192.168.43.187:5000"
 }

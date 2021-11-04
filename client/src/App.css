@@ -2,6 +2,9 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+body {
+  cursor: url("./images/cursor.png"), auto;
+}
 /* Chrome safari firefox */
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {

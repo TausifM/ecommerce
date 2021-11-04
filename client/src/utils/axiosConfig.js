@@ -2,5 +2,5 @@ import axios from "axios";
 // current environment
 
 export const app = axios.create({
-  baseURL: "https://smbfurniture.in/api/", // production
+  baseURL: "http://localhost:5000", // production
 });

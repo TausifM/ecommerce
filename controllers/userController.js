@@ -1,5 +1,5 @@
 const ErrorHander = require("../utils/errorhander");
-const catchAsyncErrors = require("../middleware/cathAsyncError");
+const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const User = require("../models/userModel");
 const sendToken = require("../utils/jwtToken");
 const sendEmail = require("../utils/sendEmail");
@@ -89,7 +89,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
   try {
     await sendEmail({
       email: user.email,
-      subject: `Smb Furniture Password Recovery`,
+      subject: `Ecommerce Password Recovery`,
       message,
     });
 
@@ -142,7 +142,7 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
   sendToken(user, 200, res);
 });
 
-// Get User Details
+// Get User Detail
 exports.getUserDetails = catchAsyncErrors(async (req, res, next) => {
   const user = await User.findById(req.user.id);
 
